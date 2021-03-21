@@ -8,6 +8,7 @@ require 'faker'
 require 'unicode_utils'
 
 racas_default()
+
 classes_default()
 personagens_default()
 

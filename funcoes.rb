@@ -189,6 +189,7 @@ def opcoes(escolha)
       limpa_terminal
 
       if $personagens.length!=0
+      
         escolher_personagem
         puts 'Escolha o personagem'
         print '╚► '
