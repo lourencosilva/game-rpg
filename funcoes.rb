@@ -98,7 +98,7 @@ def listar_personagens(raca, classe)
       # byebug
       puts "Personagens da Raça - #{raca}"
       for personagem in $personagens
-      	if personagem.raca.to_s== raca.to_s
+      	if personagem.raca.to_s == raca.to_s
       		puts personagem.to_s
       	end
       end
@@ -107,7 +107,7 @@ def listar_personagens(raca, classe)
       puts "Personagens da Classe - #{classe}"
 
       for personagem in $personagens
-      	if personagem.classe.to_s== classe.to_s
+      	if personagem.classes.to_s == classe.to_s
       		puts personagem.to_s
       	end
       end
@@ -152,8 +152,10 @@ def opcoes(escolha)
         classe= $classes[id_classe-1]
         personagens.evoluir(classe)
         puts "Personagem evoluído com sucesso!!!"
-      else nao_ha_personagens end
-        press_enter
+      else 
+        nao_ha_personagens 
+      end
+      press_enter
     when 4
       limpa_terminal
       listar_classes
@@ -167,15 +169,19 @@ def opcoes(escolha)
       limpa_terminal
       if $personagens.length!=0
         listar_personagens(0,0)
-      else nao_ha_personagens end 
-        press_enter
+      else 
+        nao_ha_personagens 
+      end 
+      press_enter
     when 7
       limpa_terminal
       if $personagens.length!=0
         raca = escolher_raca
         listar_personagens(raca,0)
-      else nao_ha_personagens end 
-        press_enter
+      else 
+        nao_ha_personagens 
+      end 
+      press_enter
     when 8
       limpa_terminal
       if $personagens.length!=0
@@ -183,8 +189,10 @@ def opcoes(escolha)
         print '╚► '
         classe = gets.chomp
         listar_personagens(0,classe)
-      else nao_ha_personagens end 
-        press_enter
+      else 
+        nao_ha_personagens 
+      end 
+      press_enter
     when 9
       limpa_terminal
 
@@ -201,9 +209,11 @@ def opcoes(escolha)
         puts "Força : #{personagens.forca}"
         puts "Ataque: #{personagens.ataque}"
 
-      else nao_ha_personagens end
-        press_enter
-    when 00
+      else 
+        nao_ha_personagens 
+      end
+      press_enter
+    when 0
       limpa_terminal
       puts 'Saindo do jogo...'
     else
@@ -237,8 +247,6 @@ def cadastrar_personagem
   idade = gets.chomp.to_i
 
   raca=escolher_raca
-
-  # escolher_classe
   listar_classes
   print '      ╚► '
 
@@ -246,28 +254,8 @@ def cadastrar_personagem
   classe= $classes[id_classe-1]
 
   
-#  puts classe.inspect
-
   $personagem = Personagem.new nome, idade, raca, classe
-  # puts '--------------------'
-  # puts classe.nome
-  # # puts $classes.vida
-  # puts '--------------------'
-
-  # $personagem.raca.forca=classe.forca
-  
-  
-  
   $personagens << $personagem
-  # puts "#{$personagem.nome}'s Classes:"
-
-  # $personagem.classes.each do |classe|
-  #   puts "  #{classe.nome}"
-  # end
-  
-  # puts "#{$personagem.nome}'s Attributes:"
-  # puts "  Vida: #{$personagem.vida}"
-  # puts "  Ataque: #{$personagem.ataque}"
 
   puts "Personagem #{nome} criado com sucesso!!!"
 end
@@ -363,9 +351,3 @@ def listar_classes
     cont += 1
   end
 end
-
-
-
-
-
-
