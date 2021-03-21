@@ -16,7 +16,6 @@ class Raca
   end
 
   def to_s_atributos
-    # "#{@nome}"
     "Nome: #{@nome} - Vida: #{@vida} - Ataque: #{@ataque} - Defesa: #{@defesa} - Inteligência: #{@inteligencia} - Força: #{@forca}"
   end  
 end
