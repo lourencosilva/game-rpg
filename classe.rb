@@ -14,6 +14,10 @@ class Classe
   def to_s
     "Raça: #{@nome} | Habilidade: #{@habilidade} | Modificadores: #{@modificadores.inspect}"
   end
+  
+  def to_s_nome
+    "#{@nome}"
+  end
 end
 
 

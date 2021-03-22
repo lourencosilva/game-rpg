@@ -1,4 +1,3 @@
-# require_relative './dependencia/raca.rb'
 require_relative 'raca'
 require_relative 'personagem'
 require_relative 'funcoes'

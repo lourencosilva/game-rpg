@@ -18,7 +18,6 @@ class  Personagem
 
   def evoluir(classe)
     @classes << classe
-
   end
 
   def attribute(symbol)

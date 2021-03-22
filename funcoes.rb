@@ -102,14 +102,15 @@ def listar_personagens(raca, classe)
       		puts personagem.to_s
       	end
       end
-    elsif (raca0=0 && classe!=0)
+    elsif (raca==0 && classe!=0)
       classe=$classes[classe.to_i-1]
       puts "Personagens da Classe - #{classe}"
 
       for personagem in $personagens
-      	if personagem.classes.to_s == classe.to_s
-      		puts personagem.to_s
-      	end
+        puts personagem.classe.to_s_nome
+      	# if personagem.classes.to_s_nome == classe.to_s
+      		puts personagem.to_s_nome
+      	# end
       end
     end
   else
@@ -376,6 +377,3 @@ def racas_default()
   $racas.each do |valor|
     puts "   ► #{cont} - #{valor}"
     cont += 1
-  end
-  end
-  
