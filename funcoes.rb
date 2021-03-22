@@ -351,3 +351,31 @@ def listar_classes
     cont += 1
   end
 end
+
+def racas_default()
+  $racas = []
+  $raca = Raca.new("Humano", 20, 8, 8, 10, 10)
+  $racas << $raca
+  
+  $raca = Raca.new("Elfo", 25,5, 6, 20, 10)
+  $racas << $raca
+  
+  $raca = Raca.new("Anao", 18, 9, 11, 7, 20)
+  $racas << $raca
+  
+  $raca = Raca.new("Orc", 15, 12, 5, 2, 25)
+  $racas << $raca
+  end
+  
+  def listar_racas
+  puts '╔═══════════════════════════════════════════════╗'
+  puts '║               RACAS  CADASTRADAS              ║'
+  puts '╚═══════════════════════════════════════════════╝'
+  # byebug
+  cont = 1
+  $racas.each do |valor|
+    puts "   ► #{cont} - #{valor}"
+    cont += 1
+  end
+  end
+  
